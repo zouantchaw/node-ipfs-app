@@ -18,7 +18,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/upload', (req, res) => {
-
+  // parse post request
+  const file = req.files.file
+  const fileName = req.body.fileName;
+  const filePath = 'files/' + fileName
 })
 
 const addFile = async (fileName, filePath) => {
